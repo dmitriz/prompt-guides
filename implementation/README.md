@@ -20,6 +20,14 @@ Structured planning and execution frameworks:
 - Timeline planning and optimization
 - Risk assessment and mitigation
 
+### **[`parameter-tuning-guide.md`](parameter-tuning-guide.md)** 🎛️
+Essential parameter optimization for maximum AI performance:
+- Temperature, top-P, top-K optimization strategies
+- Task-specific parameter combinations
+- Performance benchmarking and A/B testing
+- Cost optimization techniques
+- Troubleshooting common parameter issues
+
 ## 🎯 Production Readiness Checklist
 
 ### **Safety and Security** ✅
