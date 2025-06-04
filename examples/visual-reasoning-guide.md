@@ -241,7 +241,7 @@ Multiple Agents → Tree of Thoughts → Cross-Validation → Synthesis
 ## Integration with Other Guides
 
 **Related Content**:
-- [Interactive Examples](interactive-examples.md) - Executable versions of these patterns
+- [Interactive Examples](../implementation/interactive-examples.md) - Executable versions of these patterns
 - [Advanced Agent Orchestration](../advanced-frameworks/multi-agent-orchestration-guide.md) - Complex coordination patterns
 - [Google Techniques](../google/google-prompt-engineering-guide.md) - Official implementation guidance
 

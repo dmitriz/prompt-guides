@@ -385,4 +385,4 @@ Development Actions:
 
 ---
 
-*This guide focuses on fundamental agent execution patterns that form the foundation for effective AI task management. For advanced multi-agent orchestration and coordination patterns, see the [Advanced Agent Orchestration Framework](../../collab-frame/advanced-agent-orchestration.md) in the Collab Frame project.*
+*This guide focuses on fundamental agent execution patterns that form the foundation for effective AI task management. For advanced multi-agent orchestration and coordination patterns, see the Advanced Agent Orchestration Framework in the Collab Frame project.*
