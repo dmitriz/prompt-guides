@@ -34,3 +34,6 @@ build/
 .svelte-kit/
 *.log
 .DS_Store
+
+# Prevent recreation of deleted nested READMEs
+tools/README.md
