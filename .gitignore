@@ -35,10 +35,5 @@ build/
 *.log
 .DS_Store
 
-# Prevent recreation of deleted nested READMEs
-*/README.md
-*/readme.md
-*/README.txt
-*/readme.txt
-**/README.*
+# Prevent specific file resurrection issues
 tools/README.md
