@@ -2,8 +2,38 @@
 """
 PDF to Markdown Converter for Prompt Guides Repository
 
+OVERVIEW:
 This script extracts text content from PDF files and converts them to markdown format.
-It processes two specific PDF files in the repository and creates corresponding markdown files.
+It processes configured PDF files in the repository and creates corresponding markdown files.
+
+FEATURES:
+- Text extraction and cleaning from PDF documents
+- Structure preservation with heading detection
+- Batch processing of configured PDF files
+- Automatic markdown formatting with page markers
+- Text normalization and bullet point handling
+
+USAGE:
+    python extract_pdfs.py
+    
+    # Script processes PDF files configured in the main() function
+    # Place PDF files in repository root and update the pdf_files list
+    # Generated markdown files will be created in the same directory
+
+DEPENDENCIES:
+    PyMuPDF (fitz): pip install pymupdf>=1.26.0
+    
+CONFIGURATION:
+    Edit the pdf_files list in main() function to add new PDF files:
+    - 'path': PDF filename (in repository root)
+    - 'title': Title for generated markdown
+    - 'output': Output markdown filename
+
+OUTPUT:
+    - Structured markdown files with preserved document hierarchy
+    - Page markers for reference (<!-- Page N -->)
+    - Cleaned text with proper formatting
+    - Heading detection and markdown conversion
 """
 
 import fitz  # PyMuPDF

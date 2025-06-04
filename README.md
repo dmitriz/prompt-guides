@@ -84,4 +84,12 @@ Each guide is self-contained and comprehensive. The organized folder structure a
 - **Apply domain-specific knowledge** through targeted examples
 - **Implement in production** using technical patterns and frameworks
 
+## 🛠️ Development Guidelines
+
+### **Windows Development Support**
+- **[`.copilot-instructions.md`](.copilot-instructions.md)** - Systematic Windows path and terminal management for GitHub Copilot
+- Prevents common Windows path issues and terminal blocking
+- Mandatory MCP tool usage for git operations
+- Proactive prevention approach for efficient development
+
 *Choose the appropriate folder based on your experience level and specific needs.*
