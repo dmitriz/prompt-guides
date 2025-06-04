@@ -65,7 +65,7 @@ See **[Implementation](implementation/)** for technical patterns:
 
 ## 🔗 Related Projects
 
-For advanced multi-agent orchestration that goes beyond core prompt engineering, see the **[Collab Frame](../collab-frame/)** project which provides sophisticated collaboration frameworks for human-AI partnerships.
+For advanced multi-agent orchestration that goes beyond core prompt engineering, see the **[Collab Frame](../../collab-frame/)** project which provides sophisticated collaboration frameworks for human-AI partnerships.
 
 ## 📚 Research Sources
 

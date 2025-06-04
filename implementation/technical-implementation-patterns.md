@@ -381,4 +381,4 @@ Adaptive Improvement:
 
 ---
 
-*This technical implementation guide provides the infrastructure and deployment patterns necessary for production AI systems. For advanced multi-agent coordination patterns, see the [Advanced Agent Orchestration Framework](../collab-frame/advanced-agent-orchestration.md) in the Collab Frame project.*
+*This technical implementation guide provides the infrastructure and deployment patterns necessary for production AI systems. For advanced multi-agent coordination patterns, see the [Advanced Agent Orchestration Framework](../../collab-frame/advanced-agent-orchestration.md) in the Collab Frame project.*
