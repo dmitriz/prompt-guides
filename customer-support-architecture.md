@@ -47,39 +47,9 @@ User Reply
 
 ## Planning System
 
-### Planning Agent Prompt Structure
+The Planning System section has been moved to a dedicated document for improved clarity and modularity.
 
-The planning agent is responsible for creating structured, policy-compliant action sequences. The prompt is designed to handle ~1.5K tokens of dynamic information including message history, memory system learnings, and company policies.
-
-#### Core Planning Prompt
-
-```markdown
-## Plan elements
-- A plan consists of steps.
-- You can always include <if_block> tags to include different steps based on a condition.
-
-### How to Plan
-- When planning next steps, make sure it's only the goal of next steps, not the overall goal of the ticket or user.
-- Make sure that the plan always follows the procedures and rules of the # Customer service agent Policy doc
-
-### How to create a step
-- A step will always include the name of the action (tool call), description of the action and the arguments needed for the action. It will also include a goal of the specific action.
-
-The step should be in the following format:
-<step>
-<action_name></action_name>
-<description>{reason for taking the action, description of the action to take, which outputs from other tool calls that should be used (if relevant)}</description>
-</step>
-
-- The action_name should always be the name of a valid tool
-- The description should be a short description of why the action is needed, a description of the action to take and any variables from other tool calls the action needs e.g. "reply to the user with instructions from <helpcenter_result>"
-- Make sure your description NEVER assumes any information, variables or tool call results even if you have a good idea of what the tool call returns from the SOP.
-- Make sure your plan NEVER includes or guesses on information/instructions/rules for step descriptions that are not explicitly stated in the policy doc.
-- Make sure you ALWAYS highlight in your description of answering questions/troubleshooting steps that <helpcenter_result> is the source of truth for the information you need to answer the question.
-
-- Every step can have an if block, which is used to include different steps based on a condition.
-- And if block can be used anywhere in a step and plan and should simply just be wrapped with the <if_block condition=''></if_block> tags. An <if_block> should always have a condition. To create multiple if/else blocks just create multiple <if_block> tags.
-```
+➡️ [See detailed Planning System architecture and prompt patterns in `planning-system.md`](./planning-system.md)
 
 ### Variable Reference System
 
@@ -115,6 +85,29 @@ Use `{{}}` notation for policy-defined information:
 
 ```xml
 <plan>
+    <!--
+        Documentation Comment
+
+        Priority: ![medium](https://img.shields.io/badge/priority-medium-yellow)
+
+        Clarification Request:
+        The document currently references several variables related to tool call results, including `<helpcenter_result>`, `<search_helpcenter_result>`, and `<search_result>`. However, their relationship and intended usage are not explicitly defined, which may cause confusion for readers and implementers.
+
+        1. Relationship Clarification:
+            - Please clarify whether `<helpcenter_result>`, `<search_helpcenter_result>`, and `<search_result>` are:
+                a) Distinct variables representing different types of tool call results (e.g., specific to helpcenter, general search, or a generic result container), or
+                b) Interchangeable terms referring to the same result object, with naming variations used for illustrative or contextual purposes.
+
+        2. Documentation Consistency:
+            - If `<search_helpcenter_result>` and `<search_result>` are standard variables within this architecture (not just illustrative), consider explicitly defining them in the "Tool Call Results" section (lines 87-90), alongside `<helpcenter_result>`.
+            - Providing clear definitions and intended use cases for each variable will improve clarity and consistency across this document and related files (e.g., `examples-and-templates.md`).
+
+        Recommendation:
+        - Add a subsection to the "Tool Call Results" section that lists and defines all standard result variables used throughout the documentation suite.
+        - Include a note on whether these variables are interchangeable or have distinct roles, and update references in all relevant sections for consistency.
+
+        This clarification will help ensure that readers understand the correct usage and scope of each result variable, reducing ambiguity and improving maintainability.
+    -->
     <step>
         <action_name>search_helpcenter</action_name>
         <description>Search helpcenter for information about feature_name and how to resolve error_name</description>

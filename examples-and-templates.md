@@ -2,7 +2,7 @@
 
 ## Scenario: User Error with Feature
 
-**Context**: User has error with a feature and has provided basic information about the error
+**Context**: A user has an error with a feature and has provided basic information about the error
 
 ### Complete Plan Structure
 
@@ -242,3 +242,188 @@ Template for complex troubleshooting scenarios with multiple fallback levels.
 - Include user authentication checks
 - Add escalation steps for critical issues
 - Include follow-up actions for resolved issues
+# Google Prompt Engineering Examples
+
+## Chain-of-Thought Template
+
+```
+Solve this problem step-by-step:
+{{problem_statement}}
+
+Let me work through this systematically:
+Step 1: [First logical step]
+Step 2: [Second logical step]
+Step 3: [Final reasoning]
+Therefore: [Conclusion]
+```
+
+## Few-Shot Classification Template
+
+```
+Classify the sentiment of these reviews:
+
+Example: "Great product, exceeded expectations!" → Positive
+Example: "Poor quality, broke after one use." → Negative
+Example: "It's okay, nothing special." → Neutral
+
+Review to classify: {{new_review}}
+Sentiment:
+```
+
+## Role-Based Code Review Template
+
+```
+You are a senior software engineer reviewing code for security vulnerabilities.
+
+Review this {{language}} code:
+{{code_block}}
+
+Focus on:
+1. Security vulnerabilities
+2. Performance issues
+3. Best practices compliance
+
+Provide specific recommendations with line references.
+```
+
+## Structured Output Template
+
+```
+Analyze this data and return JSON:
+
+Data: {{data_input}}
+
+Required format:
+{
+  "summary": "brief overview",
+  "key_insights": ["insight1", "insight2"],
+  "confidence": 0.85,
+  "recommendations": ["rec1", "rec2"]
+}
+```
+
+## Tree of Thoughts Template
+
+```
+Problem: {{complex_problem}}
+
+Let me explore multiple approaches:
+
+Approach 1: {{strategy_1}}
+- Pros: {{pros_1}}
+- Cons: {{cons_1}}
+
+Approach 2: {{strategy_2}}
+- Pros: {{pros_2}}
+- Cons: {{cons_2}}
+
+Best approach: {{chosen_strategy}} because {{reasoning}}
+```
+
+---
+
+# Google-Specific Templates
+
+## Human-Focused Templates
+
+### Google's Chain-of-Thought Prompt Template
+
+```
+Solve the following problem step-by-step:
+
+Problem: {{problem_description}}
+
+Step 1: Understand what is being asked.
+[Think about the problem]
+
+Step 2: Identify the key information.
+[List relevant facts and data]
+
+Step 3: Apply appropriate methods.
+[Show calculations or reasoning]
+
+Step 4: Verify the solution.
+[Check if the answer makes sense]
+
+Step 5: Provide the final answer.
+[State the conclusion clearly]
+```
+
+### Google's Role-Based Prompt Template
+
+```
+You are a {{specific_role}} with expertise in {{domain}}.
+
+Task: {{task_description}}
+
+Consider the following:
+- {{key_consideration_1}}
+- {{key_consideration_2}}
+- {{key_consideration_3}}
+
+Format your response as:
+1. Initial assessment
+2. Detailed analysis
+3. Recommended actions
+```
+
+### Google's Product Analysis Template
+
+```
+Analyze this product description in detail:
+
+Product: {{product_description}}
+
+Provide an analysis with these sections:
+1. Target Audience: Identify the primary and secondary customer segments.
+2. Key Benefits: List the top 3 benefits highlighted in the description.
+3. Competitive Positioning: How does this product differentiate itself?
+4. Improvement Suggestions: Recommend 2-3 ways the description could be enhanced.
+
+Format your response as bullet points under each section heading.
+```
+
+## AI Agent-Focused Templates
+
+### Google's Parameter Configuration Template (for AI Systems)
+
+```json
+{
+  "task_type": "{{task_category}}",
+  "parameters": {
+    "temperature": {{temperature_value}},
+    "top_p": {{top_p_value}},
+    "top_k": {{top_k_value}}
+  },
+  "model_configuration": {
+    "response_length": {{max_tokens}},
+    "stop_sequences": ["{{stop_sequence_1}}", "{{stop_sequence_2}}"]
+  },
+  "structured_output": {
+    "format": "{{output_format}}",
+    "schema": {{json_schema}}
+  },
+  "evaluation_metrics": ["{{metric_1}}", "{{metric_2}}"]
+}
+```
+
+### Google's ReAct Agent Template (for AI Systems)
+
+```json
+{
+  "task": "{{task_description}}",
+  "thinking_framework": "react",
+  "steps": [
+    {
+      "thought": "{{reasoning_about_current_state}}",
+      "action": "{{tool_name}}",
+      "action_input": "{{tool_parameters}}",
+      "observation": "{{tool_output}}"
+    }
+  ],
+  "response_requirements": {
+    "include_reasoning_trace": {{boolean}},
+    "final_answer_format": "{{format_specification}}"
+  }
+}
+```

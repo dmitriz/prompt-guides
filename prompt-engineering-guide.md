@@ -82,7 +82,7 @@ A plan consists of structured steps that can include conditional logic to handle
 #### Step Format
 ```xml
 <step>
-<action_name>[tool_name]</action_name>
+<action_name>[Name of the tool to be called, e.g., search_helpcenter]</action_name>
 <description>[reason] [action_description] [variables_needed]</description>
 </step>
 ```
@@ -528,7 +528,7 @@ You are a [specific role with expertise].
 </plan>
 ```
 
-### Analysis Template
+## Analysis Template
 
 ```
 # Analysis Framework
