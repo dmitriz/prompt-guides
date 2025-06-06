@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "check-links": "node utils/check-links.js README.md",
+    "check-all-links": "node utils/check-links.js"
+  },
+  "devDependencies": {
+    "markdown-link-check": "^3.13.7"
+  }
+}
